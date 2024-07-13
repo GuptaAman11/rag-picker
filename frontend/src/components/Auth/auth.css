@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.l-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/Users/shubham/tourist0-site/frontend/src/images/image 1.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+
+.l-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 60px;
+    background-color: rgba(255, 255, 255, 1); /* Example background color with opacity */
+}
+
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.l-title{
+    display: flex;
+    gap: 300px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(26, 23, 23, 0.38);
+
+    
+}
+
+.l-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+      
+}
+.l-input-container input {
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    border: none;
+    border-bottom: 1px solid;
+    font-size: 17px;
+    outline: none;
+    color: rgba(26, 23, 23, 0.38);
+
+}
+.l-input-container input::placeholder {
+    color: rgba(26, 23, 23, 0.38); 
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.l-input-container-forget-password{
+    display: flex;
+    justify-content: end;
+    margin-top: 3px;
+    
+}
+
+.l-input-container-forget-password a{
+    color: rgba(26, 23, 23, 0.38);
+    text-decoration: none;
+}
+
+.l-input-container-remember{
+    display: flex;
+    gap: 6px;
+    margin-top: 20px;
+}
+
+.l-input-container-remember label{
+    color: rgba(26, 23, 23, 0.38);
+}
+.l-button button {
+    padding: 20px 0;
+    margin-top: 35px;
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #35A8E9;
+    border: none;
+    color: white;
+    border-radius: 10px;
+
+}
+
+.l-or {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    letter-spacing: 2px;
+    color: rgba(26, 23, 23, 0.38);
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.l-signin-google {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.l-signin-google .l-image img{
+    width: 20px;
+    height: 20px;
+}
+
+.l-signin-google .l-text label {
+    color: rgba(3, 3, 3, 0.9);
+    font-size: 15px;
+    letter-spacing: 0.5px;
+
+}

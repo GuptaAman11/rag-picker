@@ -1,0 +1,68 @@
+.a-main-container{
+    position: relative;
+
+}
+.a-maindiv{
+    display: flex;
+    flex-direction: column;
+    flex : 1 0 100% ;
+    scroll-snap-align: start;
+    
+}
+.a-textdiv{
+    font-style: italic;
+    font-size: 25px;
+    font-weight: bold;
+}
+.a-imagediv{
+    display: flex;
+}
+
+.a-image {
+    margin-right: 50px;
+}
+.a-image img{
+    object-fit: cover;
+    width: 400px;
+    height: 400px;
+}
+.a-imgtext{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+}
+.a-experience {
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+.slider-nav {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    column-gap: 1rem;
+}
+
+.slider-nav a {
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.slider {
+    display: flex;
+    height: 100%;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.slider::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+  }
