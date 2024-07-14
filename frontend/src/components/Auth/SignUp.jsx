@@ -11,10 +11,12 @@ const SignUp = () => {
     const [url, setUrl] = useState('');
 
     const {register} = useRegister()
-    const [user , setUser] = useState({username: '', email: '', password: '',location:'',mobile:'', image : {url}})
-    console.log(user)
+    const [user , setUser] = useState({username: '', email: '', 
+        password: '',location:'',mobile:'', 
+        typeOfUser:'' ,image : {url}})
 
-    
+        console.log(user)
+
 
     const handleOnChange = (e) => {
         setUser({
@@ -84,13 +86,20 @@ const SignUp = () => {
 
 
                         <div className="l-input-container">
-                            <input type="text" id="location" name="location" placeholder='location' onChange={handleOnChange}  />
+                            <input type="text"  name="location" placeholder='location' onChange={handleOnChange}  />
                         </div>
                         <div className="l-input-container">
                             <input type="file" id="image" name="image" placeholder='image'   onChange={(e) => setImage(e.target.files[0])} required/>
                         </div>
                         <div className="l-input-container">
                             <input type="tel" id="mobile" name="mobile" placeholder='mobile Number' onChange={handleOnChange} required />
+                        </div>
+                        <div className="l-input-container">
+                            <select id="location" name="typeOfUser" onChange={handleOnChange} className='l-select'>
+                                <option value="user">user</option>
+                                <option value="rag">rag picker</option>
+                                
+                            </select>
                         </div>
 
 
@@ -104,7 +113,7 @@ const SignUp = () => {
 
                         </div>
                         <div className='l-button'>
-                        <button type="submit"  onClick={saveImage}>Log in</button>
+                        <button type="submit"  onClick={saveImage}>SignUp</button>
 
                         </div>
                         

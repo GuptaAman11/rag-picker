@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom'
 
 const Login = () => {
     const {userLogin} = useLogin()
-    const [user , setUser] = useState({ email: '', password: '',location:''})
-
+    const [user , setUser] = useState({ email: '', password: '',location:'', typeOfUser : ''})
+    console.log(user)
     const handleOnChange = (e) => {
         setUser({
             ...user ,
@@ -40,9 +40,15 @@ const Login = () => {
                         <div className="l-input-container">
                             <input type="password" id="password" name="password" placeholder='password' onChange={handleOnChange}  />
                         </div>
+
                         <div className="l-input-container">
-                            <input type="text" id="location" name="location" placeholder='location' onChange={handleOnChange}  />
+                            <select id="location" name="typeOfUser" onChange={handleOnChange} className='l-select'>
+                                <option value="user">user</option>
+                                <option value="rag">rag picker</option>
+                                
+                            </select>
                         </div>
+
                         <div className="l-input-container-forget-password">
                             <a href="#">Forgot password?</a>
                         </div>

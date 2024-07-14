@@ -1,0 +1,20 @@
+/* Mapx.css */
+
+.mapboxgl-ctrl-geocoder {
+    width: 100% !important;
+    padding: 10px !important;
+  }
+  
+  .mapboxgl-ctrl-geocoder input[type="text"] {
+    padding: 10px !important;
+  }
+  
+  .mapboxgl-ctrl-geocoder .mapboxgl-ctrl-geocoder--pin-right {
+    display: none;
+  }
+  
+  .mapboxgl-ctrl-geocoder .suggestions {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
