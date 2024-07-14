@@ -3,6 +3,7 @@ import Login from "./components/Auth/Login";
 import SignUp from "./components/Auth/SignUp";
 import EmailVerify from "./components/EmailVerify/EmailVerify";
 import Dashboard from "./components/Dashboard/Dashboard";
+import Payment from "./components/Payment/Payment";
 
 
 
@@ -25,7 +26,7 @@ function App() {
           <Route path='/register' element={<SignUp /> } />
           <Route path='/home' element={<Dashboard /> } />
           
-        
+          <Route path='/payment' element={<Payment/> } />
           <Route path="/users/:id/verify/:token" element={<EmailVerify />} />
 
 

@@ -51,12 +51,12 @@ const SignUp = () => {
 
   console.log("abcderf",url);
   console.log(typeof(url));
-    const handleOnSubmit = async(e) => {
-        e.preventDefault();
-        await register(user ,url)
+  const handleOnSubmit = async(e) => {
+    e.preventDefault();
+    await register(user ,url)
 
-        
-    }
+    
+}
   return (
     <div className="l-background">
         <div className='l-container'>
