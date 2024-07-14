@@ -1,0 +1,63 @@
+
+
+.sidebar {
+    font-family: Arial, sans-serif;
+    height: 110vh;
+   
+    background-color: #252535;
+    width: 400px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:absolute;
+    z-index: 99;
+        transform: translate(-50%,2.5%);
+            /* Initially hidden off-screen */
+            /* transition: transform 5s  ease-out; */
+            /* Smooth transition */
+}
+
+ 
+ 
+
+.profile {
+    text-align: center;
+}
+.profile h2{
+    font-weight: 700;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-left: 2rem;
+}
+
+.s-ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.s-ul li {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.s-ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ddd;
+    width: 100%;
+}
+
+.s-ul li a.active,
+.s-ul li a:hover {
+    background-color: #6A0DAD;
+    color: #fff;
+}
+

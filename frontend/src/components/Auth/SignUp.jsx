@@ -4,7 +4,27 @@ import { useRegister } from '../../hooks/auth'
 import { Link } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+import { AddressAutofill } from '@mapbox/search-js-react';
+
+const MAPBOX_ACCESS_TOKEN = 'pk.eyJ1IjoiYW1hbjM0NSIsImEiOiJjbHlqcmxzdW8wdnI4MmtwYWxwMzYzZHBtIn0.andKMOgTS8IHABq-B6nEsg';
+
 const SignUp = () => {
+
+    const [abc, setAbc] = useState('');
+
+  const handleAutofillRetrieve = (response) => {
+    // Handle the autofill retrieve here if needed
+    console.log('Autofill response:', response);
+  };
+
+  const handleAddressSelect = (address) => {
+    // Handle address selection
+    console.log('Selected address:', address);
+    setAbc(address); // Store selected address in state
+  };
+
+  //main compo
 
 
     const [image, setImage] = useState('');
@@ -86,8 +106,32 @@ const SignUp = () => {
 
 
                         <div className="l-input-container">
-                            <input type="text"  name="location" placeholder='location' onChange={handleOnChange}  />
-                        </div>
+                            <AddressAutofill
+                                accessToken={MAPBOX_ACCESS_TOKEN}
+                                onRetrieve={handleAutofillRetrieve}
+                                onSelect={handleAddressSelect}
+                                >
+                                <label className="txt-s txt-bold color-gray mb3">
+                                    <div className="relative color-gray">
+                                    <input
+                                        className="input mb12"
+                                        autoComplete="address-line1"
+                                        name="address-line1"
+                                        placeholder="Enter your address"
+                                        value={abc} // Bind input value to state
+                                        onChange={(e) => setAbc(e.target.value)} // Update state on input change
+                                        required
+                                    />
+                                    <svg className="absolute" viewBox="0 0 18 18" xmlSpace="preserve" width="20" height="20"
+                                        fill="currentColor" style={{ top: 8, right: 8 }}>
+                                        <path
+                                        d="M7.4 2.5c-2.7 0-4.9 2.2-4.9 4.9s2.2 4.9 4.9 4.9c1 0 1.8-.2 2.5-.8l3.7 3.7c.2.2.4.3.8.3.7 0 1.1-.4 1.1-1.1 0-.3-.1-.5-.3-.8L11.4 10c.4-.8.8-1.6.8-2.5.1-2.8-2.1-5-4.8-5zm0 1.6c1.8 0 3.2 1.4 3.2 3.2s-1.4 3.2-3.2 3.2-3.3-1.3-3.3-3.1 1.4-3.3 3.3-3.3z">
+                                        </path>
+                                    </svg>
+                                    </div>
+                                </label>
+                                </AddressAutofill>         
+                           </div>
                         <div className="l-input-container">
                             <input type="file" id="image" name="image" placeholder='image'   onChange={(e) => setImage(e.target.files[0])} required/>
                         </div>

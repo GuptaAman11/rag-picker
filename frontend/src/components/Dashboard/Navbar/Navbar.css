@@ -1,0 +1,57 @@
+.n-mian {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1f1f2e;
+  
+    height:auto;
+}
+
+.navbar {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 10px 20px;
+    background-color: #292942;
+    color: white;
+}
+
+.logo{
+    font-size:25px;
+}
+
+.search-bar input {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ddd;
+}
+
+.nav-links .fas {
+    font-size: 20px;
+}

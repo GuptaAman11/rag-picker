@@ -6,6 +6,7 @@
     "@cloudinary/react": "^1.13.0",
     "@cloudinary/url-gen": "^1.19.0",
     "@mapbox/mapbox-gl-geocoder": "^5.0.2",
+    "@mapbox/search-js-react": "^1.0.0-beta.21",
     "@material-tailwind/react": "^2.1.9",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
