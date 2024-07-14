@@ -8,6 +8,7 @@ import LandingPage from "./components/LandingPage copy/LandingPage";
 
 
 
+
 function App() {
   return (
     <div className="App">
@@ -26,7 +27,7 @@ function App() {
           <Route path='/service' element={<Services /> } />
           <Route path='/hotel' element={<HotelCard /> } />
           <Route path='/landing' element={<LandingPage /> } />
-
+        
           <Route path="/users/:id/verify/:token" element={<EmailVerify />} />
 
 

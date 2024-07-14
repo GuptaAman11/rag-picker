@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 const Login = () => {
     const {userLogin} = useLogin()
-    const [user , setUser] = useState({ email: '', password: ''})
+    const [user , setUser] = useState({ email: '', password: '',location:''})
 
     const handleOnChange = (e) => {
         setUser({
@@ -35,10 +35,13 @@ const Login = () => {
                 <div className="l-form">
                     <form onSubmit={handleOnSubmit}>
                         <div className="l-input-container">
-                            <input type="email" id="email" name="email" placeholder='email' onChange={handleOnChange} required />
+                            <input type="email" id="email" name="email" placeholder='email' onChange={handleOnChange}  />
                         </div>
                         <div className="l-input-container">
-                            <input type="password" id="password" name="password" placeholder='password' onChange={handleOnChange} required />
+                            <input type="password" id="password" name="password" placeholder='password' onChange={handleOnChange}  />
+                        </div>
+                        <div className="l-input-container">
+                            <input type="text" id="location" name="location" placeholder='location' onChange={handleOnChange}  />
                         </div>
                         <div className="l-input-container-forget-password">
                             <a href="#">Forgot password?</a>

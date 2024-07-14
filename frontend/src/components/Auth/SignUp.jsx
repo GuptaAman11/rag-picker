@@ -1,11 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState  , useEffect} from 'react'
 import './auth.css'
 import { useRegister } from '../../hooks/auth'
 import { Link } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const SignUp = () => {
+
+
+    const [image, setImage] = useState('');
+    const [url, setUrl] = useState('');
+
     const {register} = useRegister()
-    const [user , setUser] = useState({username: '', email: '', password: ''})
+    const [user , setUser] = useState({username: '', email: '', password: '',location:'',mobile:'', image : {url}})
     console.log(user)
+
+    
 
     const handleOnChange = (e) => {
         setUser({
@@ -13,9 +22,39 @@ const SignUp = () => {
             [e.target.name]: e.target.value
         })
     }
+
+   
+
+  const saveImage = async () => {
+    const data = new FormData();
+    data.append("file", image);
+    data.append("upload_preset", "mycloud");
+    data.append("cloud_name", "dmc50yt1l");
+
+    try {
+      if (image === null) {
+        let err = alert("error");
+        return err;
+      }
+      const res = await fetch('https://api.cloudinary.com/v1_1/dmc50yt1l/image/upload', {
+        method: "POST",
+        body: data
+      });
+      const cloudData = await res.json();
+      setUrl(cloudData.url);
+      console.log(cloudData.url);
+      toast.success("Image Upload Successfully");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  console.log("abcderf",url);
+  console.log(typeof(url));
     const handleOnSubmit = async(e) => {
         e.preventDefault();
-        await register(user)
+        await register(user ,url)
+
         
     }
   return (
@@ -37,11 +76,25 @@ const SignUp = () => {
                             <input type="text" id="username" name="username" placeholder='username' onChange={handleOnChange} required />
                         </div>
                         <div className="l-input-container">
-                            <input type="email" id="email" name="email" placeholder='email' onChange={handleOnChange} required />
+                            <input type="email" id="email" name="email" placeholder='email' onChange={handleOnChange} required  />
                         </div>
                         <div className="l-input-container">
                             <input type="password" id="password" name="password" placeholder='password' onChange={handleOnChange} required />
                         </div>
+
+
+                        <div className="l-input-container">
+                            <input type="text" id="location" name="location" placeholder='location' onChange={handleOnChange}  />
+                        </div>
+                        <div className="l-input-container">
+                            <input type="file" id="image" name="image" placeholder='image'   onChange={(e) => setImage(e.target.files[0])} required/>
+                        </div>
+                        <div className="l-input-container">
+                            <input type="tel" id="mobile" name="mobile" placeholder='mobile Number' onChange={handleOnChange} required />
+                        </div>
+
+
+
                         <div className="l-input-container-forget-password">
                             <a href="#">Forgot password?</a>
                         </div>
@@ -51,7 +104,7 @@ const SignUp = () => {
 
                         </div>
                         <div className='l-button'>
-                        <button type="submit">Log in</button>
+                        <button type="submit"  onClick={saveImage}>Log in</button>
 
                         </div>
                         

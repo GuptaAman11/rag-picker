@@ -8,9 +8,11 @@ const sendEmail = require('../utils/sendEmail');
 
 
 const register = async (req, res) => {
-    const { email, name, password } = req.body;
-    try {
-        if (!email || !name || !password) {
+    const { email, name, password,location,image, mobile} = req.body;
+    console.log(email , name );
+    console.log("this is iamge" , image);
+     try {
+        if (!image || !email || !password || !name) {
             return res.json({ msg: "all fields are required" })
         }
 
@@ -25,7 +27,11 @@ const register = async (req, res) => {
             {
                 name: name,
                 email: email,
-                password: hashPassword
+                location:location,
+                image:image,
+                password: hashPassword,
+                mobile:mobile,
+                verified : false
             }
 
         )  
@@ -48,7 +54,7 @@ const register = async (req, res) => {
 }
 
 const login = async (req, res) => {
-    const { email, password } = req.body;
+    const { email, password, location } = req.body;
     try {
         if (!email || !password) {
             return res.json({ mssg: "all fileds are required" })

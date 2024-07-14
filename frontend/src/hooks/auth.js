@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 export function useRegister() {
     
-    const register = async(user) => {
+    const register = async(user , url) => {
         try {
             const response = await fetch(
               "http://localhost:8000/api/v1/users/register",
@@ -15,6 +15,9 @@ export function useRegister() {
                   email: user.email,
                   name: user.username,
                   password: user.password,
+                  image:url,
+                  location:user.location,
+                  mobile:user.mobile,
                   
                 }),
               }
@@ -49,6 +52,7 @@ export function useRegister() {
             body: JSON.stringify({
               email: user.email,
               password: user.password,
+              location:user.location,
             }),
           });
           const responseData = await response.json();
