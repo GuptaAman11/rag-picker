@@ -4,6 +4,7 @@ import SignUp from "./components/Auth/SignUp";
 import EmailVerify from "./components/EmailVerify/EmailVerify";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Payment from "./components/Payment/Payment";
+import Mapx from "./components/Mapping/Mapx";
 
 
 

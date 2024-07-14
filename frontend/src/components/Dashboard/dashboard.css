@@ -1,5 +1,13 @@
 .dashboard-main-page{
     padding: 20px 100px;
     background-color: #1f1f2e;
+    font-family: Arial, sans-serif;
+   
 
+}
+.d-dash{
+    font-size:xx-large;
+    padding: 5px;
+    font-weight: bold;
+    
 }
