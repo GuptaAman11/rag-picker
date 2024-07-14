@@ -18,6 +18,7 @@ export function useRegister() {
                   image:url,
                   location:user.location,
                   mobile:user.mobile,
+                  typeOfUser : user.typeOfUser
                   
                 }),
               }
@@ -53,6 +54,8 @@ export function useRegister() {
               email: user.email,
               password: user.password,
               location:user.location,
+              typeOfUser : user.typeOfUser
+
             }),
           });
           const responseData = await response.json();

@@ -8,7 +8,6 @@ import Payment from "./components/Payment/Payment";
 
 
 
-
 function App() {
   return (
     <div className="App">
@@ -25,9 +24,11 @@ function App() {
           <Route path='/login' element={<Login /> } />
           <Route path='/register' element={<SignUp /> } />
           <Route path='/home' element={<Dashboard /> } />
+          <Route path='/map' element={<Mapx /> } />
           
           <Route path='/payment' element={<Payment/> } />
           <Route path="/users/:id/verify/:token" element={<EmailVerify />} />
+
 
 
 

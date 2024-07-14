@@ -25,10 +25,15 @@ const userSchema = new mongoose.Schema({
     },
     mobile: {
         type: String,
-        require:true
 
     },
     verified: { type: Boolean, default: false },
+
+    typeOfUser : {
+        type : String ,
+        enum : [ "user" , "rag"],
+        require : true,
+        },
 
 })
 

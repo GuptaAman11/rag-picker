@@ -21,3 +21,19 @@ module.exports.verifyJWT = async (req, res, next) => {
         res.status(401).json({ msg:"cxcx"})
     }
 }
+
+module.exports.rag = async(req,res,next) => {
+    try {
+        
+
+        typeOfUser = req.user.user.typeOfUser 
+        if (typeOfUser !== "rag") {
+            res.status(200).json({ msg: "you are not rag" });
+            console.log("rag")
+            
+        }
+        next()
+    } catch (error) {
+        console.log(error)
+    }    
+}
