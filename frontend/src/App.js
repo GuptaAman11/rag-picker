@@ -4,6 +4,7 @@ import SignUp from "./components/Auth/SignUp";
 import EmailVerify from "./components/EmailVerify/EmailVerify";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Payment from "./components/Payment/Payment";
+import Userprofile from "./components/UserProfile/Userprofile";
 
 
 
@@ -24,8 +25,8 @@ function App() {
           <Route path='/login' element={<Login /> } />
           <Route path='/register' element={<SignUp /> } />
           <Route path='/home' element={<Dashboard /> } />
-          <Route path='/map' element={<Mapx /> } />
-          
+          {/* <Route path='/map' element={<Mapx /> } /> */}
+          <Route path='/userprofile' element={<Userprofile/> } />
           <Route path='/payment' element={<Payment/> } />
           <Route path="/users/:id/verify/:token" element={<EmailVerify />} />
 

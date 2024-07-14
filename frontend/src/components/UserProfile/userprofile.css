@@ -1,0 +1,106 @@
+
+
+.u-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    
+}
+
+.u-sub-container{
+display: flex;
+align-items: center;
+justify-content: center;
+
+
+}
+
+.u-main-content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+   margin: 2.5rem;
+   
+   background-color: #1F1F2E;
+    border-radius: 20px ;
+}
+
+.u-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.u-header h1 {
+    margin: 0;
+   
+}
+
+.u-btn-login, .u-btn-create-account {
+    background-color: #555;
+
+   
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.u-btn-create-account {
+    background-color: #6A0DAD;
+}
+
+.u-profile-content {
+    margin-top: 20px;
+}
+
+.u-profile-picture-section, .u-account-information-section {
+    /* background-color: #2A2A3C; */
+    background-color: #292942;
+    /* background: rgb(159, 154, 154); */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.u-profile-picture-section img {
+    border-radius: 50%;
+}
+
+.u-profile-picture-section p, .u-account-information-section p {
+    margin: 10px 0;
+}
+
+.u-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.u-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.u-form input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3A3A4D;
+    color: #fff;
+}
+
+.u-form input[type="date"] {
+    color: #aaa;
+}
+.u-btn-login:hover{
+    background-color:#727070;
+}
+.u-btn-create-account:hover{
+    background-color: #913ecc;
+}
